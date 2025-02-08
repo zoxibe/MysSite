@@ -1,9 +1,8 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
-import Div from "./jsx/Div.jsx";
-import Cursor from "./jsx/Cursor.jsx";
+import { useState, useEffect } from 'react';
 import Sommaire from "./jsx/Sommaire.jsx";
 import ContactBox from "./jsx/ContactBox.jsx";
+import FaceImg from "./assets/FRANVILLE_Timeo.jpg"
 
 function App() {
 
@@ -15,7 +14,7 @@ function App() {
         setIsWhiteMode(!isWhiteMode);
     }
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
@@ -65,7 +64,7 @@ function App() {
         return () => {
             observer.disconnect();
         };
-    }, []);
+    },);
 
 
 
@@ -96,7 +95,7 @@ function App() {
                 <div className={"flip-card"} id="flip-card">
                     <div className={"flip-card-inner"}>
                         <div className={"flip-card-front"}>
-                            <img src={"src/assets/FRANVILLE_Timeo.jpg"} alt={"Avatar"} width="100%" height="100%"/>
+                            <img src={FaceImg} alt={"Avatar"} width="100%" height="100%"/>
                         </div>
                         <div className={"flip-card-back"}>
                             <h3>Timéo FRANVILLE</h3>
