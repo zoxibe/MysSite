@@ -129,7 +129,7 @@ body.white-mode input[type=submit]:hover{
     position: relative;
     height: 7vh;
     width: 7vh;
-    background-image: url('src/assets/linkedin.png');
+    background-image: url('../assets/linkedin.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -145,7 +145,7 @@ body.white-mode input[type=submit]:hover{
     position: relative;
     height: 7vh;
     width: 7vh;
-    background-image: url('src/assets/github.png');
+    background-image: url('../assets/github.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
