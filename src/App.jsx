@@ -96,7 +96,7 @@ function App() {
                 <div className={"flip-card"} id="flip-card">
                     <div className={"flip-card-inner"}>
                         <div className={"flip-card-front"}>
-                            <img src={"./assets/FRANVILLE_Timeo.jpg"} alt={"Avatar"} width="100%" height="100%"/>
+                            <img src={"src/assets/FRANVILLE_Timeo.jpg"} alt={"Avatar"} width="100%" height="100%"/>
                         </div>
                         <div className={"flip-card-back"}>
                             <h3>Timéo FRANVILLE</h3>
