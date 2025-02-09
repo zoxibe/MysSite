@@ -1,14 +1,14 @@
 body{
   padding: 0;
   margin: 0;
-  height:calc(auto + 5vh);
+  height: auto;
   width: 100vw;
   color: black;
-  background: linear-gradient(160deg, floralwhite, whitesmoke);
+  background: linear-gradient(180deg, rgb(224, 222, 193), rgb(218, 207, 168));
 }
 
 .white-mode {
-  background: linear-gradient(160deg, rgba(9, 9, 25, 0.35), rgba(18, 18, 18, 0.8));
+  background: linear-gradient(160deg, rgb(20, 21, 25), rgb(5, 9, 21));
   color: white;
 }
 
@@ -18,8 +18,8 @@ html{
 
 .ColorTheme{
 /*  background-color: lightgray;*/
-  height: 40vh;
-  width: 40vh;
+  height: 20vw;
+  width: 20vw;
   border: 0 solid white;
   box-shadow: 0 0 10px black  ;
   border-radius: 100%;
@@ -32,8 +32,8 @@ html{
 .ColorTheme:hover{
   box-shadow: 0 0 15px black;
   cursor: pointer;
-  height: 42vh;
-  width: 42vh;
+  height: 21vw;
+  width: 21vw;
   transition: height 0.3s linear, width 0.3s linear;
 }
 
@@ -47,7 +47,7 @@ html{
 
 .container {
   position: relative;
-  height: 5vh;
+  height: 2.7vw;
   width: 100vw;
   background-color: white;
   display: flex;
@@ -56,7 +56,7 @@ html{
 }
 
 .ScrollDown{
-  scale: 1.5;
+  font-size: 1.5vw;
   font-style: oblique;
   font-weight: bolder;
   position: relative;
@@ -85,7 +85,7 @@ html{
 
 .header{
   position: relative;
-  height: 95vh;
+  height: 48vw;
   width: 100%;
   display: flex;
 
@@ -100,7 +100,7 @@ html{
   position: absolute;
   top: 80%;
   left: 95%;
-  height: 15vh;
+  height: 8vw;
   width: 0.2vw;
   background-color: black;
   border: 0 solid black;
@@ -108,8 +108,8 @@ html{
 }
 .ScrolingBarInner{
   position: relative;
-  height: 1.5vh;
-  width: 1.5vh;
+  height: 0.75vw;
+  width: 0.75vw;
   border: 0 solid black;
   background-color: white;
   border-radius: 15px;
@@ -142,14 +142,14 @@ html{
 
 .Text1{
   position: absolute;
-  font-size: 1.5vw;
+  font-size: 1.7vw;
   text-align: justify;
   margin-left: 90%;
   right: -10%;
   opacity: 0;
   margin-top: 30%;
-  height: 10vw;
-  width: 40vw;
+  height: 11vw;
+  width: 44vw;
   padding-left: 1%;
   padding-right: 1%;
 
@@ -179,13 +179,13 @@ html{
 
 .Text2{
   position: absolute;
-  font-size: 1.5vw;
+  font-size: 1.7vw;
   text-align: justify;
   left: -5%;
   opacity: 0;
   margin-top: 55%;
-  height: 10vw;
-  width: 40vw;
+  height: 11vw;
+  width: 44vw;
 
   padding-bottom: 2%;
   padding-left: 1%;
@@ -215,7 +215,7 @@ html{
 
 .Text3{
   position: relative;
-  font-size: 1.5vw;
+  font-size: 2vw;
   text-align: center;
   margin-top: 80%;
   left: 50%;
@@ -243,7 +243,7 @@ html{
 
 .Text3:hover{
   height: auto;
-  width: 77vw;
+  width: 70vw;
 }
 
 .white-mode .Text3.visible{
@@ -276,7 +276,7 @@ html{
 .flip-card-inner {
   height: 20vw;
   width: 20vw;
-  margin-bottom: 60vh;
+  margin-bottom: 30vw;
   position: relative;
   text-align: center;
   transition: transform 0.6s;
@@ -321,9 +321,9 @@ html{
 }
 
 .flip-card-back {
-  background-color: black;
-  border-color: black;
-  color: white;
+  background-color: whitesmoke;
+  border-color: white;
+  color: black;
   box-shadow: 0 0 0.5vw 0.15vw black;
   font-size: 0.9vw;
   transform: rotateY(180deg);
@@ -363,9 +363,9 @@ html{
 .title{
   position: absolute;
   left: 45vw;
-  top: 50vh;
+  top: 25vw;
   transform: translate(-50%, -50%);
-  height: 20vh;
+  height: 10vw;
   width: 20vw;
 
   display: flex;
@@ -385,7 +385,7 @@ html{
 
 .title.visible{
   font-size: 21vw;
-  text-underline: balck;
+  text-underline: black;
   animation: title 1.5s ease infinite;
 
 }
@@ -415,7 +415,7 @@ h2::after {
   display: block;
   /*background: none repeat scroll 0 0 transparent;*/
   box-shadow: 0 0 10px #ffffff;
-  height: 0.1vh;
+  height: 0.05vw;
   width: 0;
   background: none;
   border: 0 solid #000000;
@@ -440,7 +440,7 @@ h2.visible::after {
   display: block;
   /*background: none repeat scroll 0 0 transparent;*/
   box-shadow: 0 0 25px #000000;
-  height: 0.1vh;
+  height: 0.05vw;
   width: 0;
   background: none;
   border: 0 solid #ffffff;
@@ -453,8 +453,8 @@ h2.visible::after {
 
 .Input{
   position: relative;
-  margin-top: 15vh;
-  height: 80vh;
+  margin-top: 8vw;
+  height: 40vw;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
@@ -468,13 +468,13 @@ h2.visible::after {
 
 .Input.visible{
   opacity: 1;
-  margin-top: 10vh;
+  margin-top: 5vw;
 }
 
 #Contact{
   position: relative;
   margin-left: 50vw;
-  transform: translate(-50%, -5vh);
+  transform: translate(-50%, -2.5vw);
   font: 7vw "Corinthia", serif;
   color:black;
   text-shadow: 0 0 5px #ffffff;
@@ -494,12 +494,12 @@ h2.visible::after {
 
 #Footer{
   position: relative;
-  margin-top: 5vh;
-  margin-bottom: 1vh;
+  margin-top: 2.5vw;
+  margin-bottom: 0.5vw;
   left: 1vw;
   display: flex;
   justify-content: start;
-  align-items: left;
+  align-items: start;
   width: 100vw;
   font: 1.5vw "Corinthia", serif;
   color: black;
@@ -541,7 +541,7 @@ h1::after {
   display: block;
   /*background: none repeat scroll 0 0 transparent;*/
   box-shadow: 0 0 10px #ffffff;
-  height: 0.1vh;
+  height: 0.05vw;
   width: 0;
   background: none;
   border: 0 solid #000000;
@@ -566,7 +566,7 @@ h1.visible::after {
   display: block;
   /*background: none repeat scroll 0 0 transparent;*/
   box-shadow: 0 0 25px #000000;
-  height: 0.1vh;
+  height: 0.05vw;
   width: 0;
   background: none;
   border: 0 solid #ffffff;
@@ -616,13 +616,13 @@ h1.visible::after {
 
 @keyframes ScrolingBarAnimation{
   0%{
-    transform: translate(-40%,14vh);
+    transform: translate(-40%,7.5vw);
   }
   25%{
     transform: translate(-40%,-50%);
   }
   100%{
-    transform: translate(-40%,14vh);
+    transform: translate(-40%,7.5vw);
   }
 }
 @keyframes scrollTextAnim{

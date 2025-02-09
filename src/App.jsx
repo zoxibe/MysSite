@@ -99,7 +99,7 @@ function App() {
                         </div>
                         <div className={"flip-card-back"}>
                             <h3>Timéo FRANVILLE</h3>
-                            <h4>Étudiant en 2ᵉ année à l’ESIEA</h4>
+                            <h4>Étudiant en 2ᵉ année à <a href={"https://www.esiea.fr"} target="_blank" style={{color:"rgb(54,169,255)"}}>l’ESIEA</a></h4>
                             <h5>École d’ingénieurs spécialisée dans les technologies du numérique</h5>
                         </div>
                     </div>
