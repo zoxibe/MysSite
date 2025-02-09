@@ -4,7 +4,7 @@ body{
   height: auto;
   width: 100vw;
   color: black;
-  background: linear-gradient(180deg, rgb(224, 222, 193), rgb(218, 207, 168));
+  background: linear-gradient(180deg, #fdf9e0, rgb(243, 234, 192));
 }
 
 .white-mode {
