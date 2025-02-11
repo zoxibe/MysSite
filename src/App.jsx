@@ -111,11 +111,11 @@ function App() {
                     <p>J'ai une forte curiosité pour les technologies de réalité augmentée et virtuelle ainsi que les système immersifs. J'apprécie également partager et créer, ce que je mets en avant lors de mes <a href={"https://www.twitch.tv/zoxibe"} target="_blank">streams</a>.</p>
                 </div>
                 <div className={"Text3"}>
-                    <p style={{fontSize: "3vw", fontFamily: "'Corinthia', serif", textDecoration:"underline", textDecorationThickness: "1px"}}>Compétences techniques</p>
+                    <p style={{fontSize: "4vw", fontFamily: "'Corinthia', serif", textDecoration:"underline", textDecorationThickness: "1px"}}>Compétences techniques</p>
                     <ol style={{listStyleType: "disc"}}>
-                        <li style={{margin: "0 13vw"}}>Programmation : [C, C++,JavaScript, Css]</li>
+                        <li style={{margin: "0 13vw"}}>Programmation : [C, C++, JavaScript, Css]</li>
                     </ol>
-                    <p style={{fontSize: "3vw", fontFamily: "'Corinthia', serif",textDecoration:"underline", textDecorationThickness: "1px"}}>Compétences personnelles</p>
+                    <p style={{fontSize: "4vw", fontFamily: "'Corinthia', serif",textDecoration:"underline", textDecorationThickness: "1px"}}>Compétences personnelles</p>
                     <ol  style={{listStyleType: "disc"}}>
                         <li style={{margin: "0 13vw"}}>Capacité à travailler en équipe.</li>
                         <li style={{margin: "0 13vw"}}>Adaptabilité et curiosité pour les nouvelles technologies.</li>
