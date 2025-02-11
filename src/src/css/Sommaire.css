@@ -1,0 +1,87 @@
+.Sommaire{
+    border:0 solid white;
+    border-radius: 50px;
+    box-shadow: 0 0 10px white;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+body.white-mode .Sommaire{
+    background-color: white;
+    box-shadow: 0 0 15px black;
+}
+
+.SommaireWrapper{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+
+    /*border: white 1px solid;*/
+    /*font-size: 600%;*/
+    font: 2vw "Corinthia", serif;;
+    color: #ffffff;
+    text-shadow: 0 0 1px #ffffff;
+    font-weight: bolder;
+
+    transition: text-shadow 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+body.white-mode .SommaireWrapper{
+    text-shadow: 0 0 1px black;
+    color: black;
+}
+
+
+.SommaireText {
+    text-decoration: none;
+    /*display: inline-block;*/
+    position: relative;
+    color: white;
+}
+
+.SommaireText::after {
+    content: "";
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    display: block;
+    /*background: none repeat scroll 0 0 transparent;*/
+    background-color: white;
+    box-shadow: 0 0 10px #ffffff;
+    height: 0;
+    width: 0;
+    border: 0 solid #000000;
+    transition: width 0.5s ease-in-out 0s, height 0.5s ease-in-out;
+}
+
+.SommaireText:hover::after {
+    width: 100%;
+    /*background-color: white;*/
+    height: 0.1vh;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+body.white-mode .SommaireText{
+    color: black;
+}
+
+body.white-mode .SommaireText::after{
+    background-color: #000000;
+    box-shadow: black;
+}
+
+body.white-mode .SommaireText:hover::after{
+    box-shadow: 0 0 10px #000000;
+}

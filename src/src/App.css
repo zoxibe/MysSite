@@ -1,0 +1,637 @@
+body{
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: 100vw;
+  color: black;
+  background: linear-gradient(180deg, whitesmoke, antiquewhite);
+}
+
+.white-mode {
+  background: linear-gradient(160deg, rgb(20, 21, 25), rgb(5, 9, 21));
+  color: white;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.ColorTheme{
+/*  background-color: lightgray;*/
+  height: 20vw;
+  width: 20vw;
+  border: 0 solid white;
+  box-shadow: 0 0 10px black  ;
+  border-radius: 100%;
+  color: whitesmoke;
+  background-color: black;
+  background-size: cover;
+  transform: translate(-50%,-50%);
+}
+
+.ColorTheme:hover{
+  box-shadow: 0 0 15px black;
+  cursor: pointer;
+  height: 21vw;
+  width: 21vw;
+  transition: height 0.3s linear, width 0.3s linear;
+}
+
+.white-mode .ColorTheme{
+  color: white;
+  box-shadow: 0 0 25px white;
+  background-color: white;
+}
+
+
+
+.container {
+  position: relative;
+  height: 2.7vw;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.ScrollDown{
+  font-size: 1.5vw;
+  font-style: oblique;
+  font-weight: bolder;
+  position: relative;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scrollTextAnim 10s linear infinite;
+}
+
+.white-mode .container{
+  background-color: black;
+}
+
+.Sommaire1 {
+  position: fixed;
+  top: 95vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  display: flex;
+  height: auto;
+  width: 20vw;
+  z-index: 10;
+}
+
+.header{
+  position: relative;
+  height: 48vw;
+  width: 100%;
+  display: flex;
+
+  flex-direction: row;
+  column-count: 2;
+  align-items: start;
+  justify-content: start;
+  overflow: hidden;
+}
+
+.ScrolingBar{
+  position: absolute;
+  top: 80%;
+  left: 95%;
+  height: 8vw;
+  width: 0.2vw;
+  background-color: black;
+  border: 0 solid black;
+  border-radius: 15px;
+}
+.ScrolingBarInner{
+  position: relative;
+  height: 0.75vw;
+  width: 0.75vw;
+  border: 0 solid black;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px black;
+  transform: translate(-40%,-50%);
+  animation: ScrolingBarAnimation 4s reverse ease-in infinite;
+}
+
+.white-mode .ScrolingBarInner{
+  background-color: black;
+  border: 1px solid white;
+  box-shadow: 0 0 10px white;
+  animation: ScrolingBarAnimation 4s reverse ease-in infinite;
+}
+.white-mode .ScrolingBar{
+  background-color: white;
+  border: 0 solid white;
+}
+
+.TextBox{
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 50vw;
+  overflow: hidden;
+}
+
+.Text1{
+  position: absolute;
+  font-size: 1.7vw;
+  text-align: justify;
+  margin-left: 90%;
+  right: -10%;
+  opacity: 0;
+  margin-top: 30%;
+  height: 11vw;
+  width: 44vw;
+  padding-left: 1%;
+  padding-right: 1%;
+
+  border: 3px solid black;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 0 10px black;
+
+  transition: right 0.3s linear, opacity 0.3s linear,height 0.3s linear,width 0.3s linear;
+}
+
+.Text1.visible{
+  right:5%;
+  opacity: 1;
+}
+
+.Text1:hover{
+  height: 11vw;
+  width: 44vw;
+}
+
+.white-mode .Text1 {
+  border-color: white;
+  box-shadow: 0 0 15px white;
+  background-color: black;
+}
+
+.Text2{
+  position: absolute;
+  font-size: 1.7vw;
+  text-align: justify;
+  left: -5%;
+  opacity: 0;
+  margin-top: 55%;
+  height: 11vw;
+  width: 44vw;
+
+  padding-bottom: 2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border: 3px solid black;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 0 10px black;
+
+  transition: left 0.3s linear, opacity 0.3s linear,height 0.3s linear,width 0.3s linear;
+}
+
+.Text2.visible{
+  left:5%;
+  opacity: 1;
+}
+.Text2:hover{
+  height: 11vw;
+  width: 44vw;
+}
+
+.white-mode .Text2{
+  border-color: white;
+  box-shadow: 0 0 15px white;
+  background-color: black;
+}
+
+.Text3{
+  position: relative;
+  font-size: 2vw;
+  text-align: center;
+  margin-top: 80%;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+
+  height: auto;
+  width: 70vw;
+  transform: translateX(-50%);
+
+  padding-bottom: 10%;
+  border: 3px solid black;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 0 10px black;
+
+  transition: bottom 0.3s linear, opacity 0.3s linear,width 0.3s linear, height 0.3s linear;
+}
+
+.Text3.visible{
+  left:50%;
+  bottom: 5%;
+  opacity: 1;
+}
+
+.Text3:hover{
+  height: auto;
+  width: 70vw;
+}
+
+.white-mode .Text3.visible{
+  border-color: white;
+  box-shadow: 0 0 15px white;
+  background-color: black;
+}
+
+.flip-card{
+  position: absolute;
+  background-color: transparent;
+  height: 20vw;
+  width: 20vw;
+  shape-outside: circle(50%) margin-box;
+  margin-top: 5vw;
+  margin-left: -10vw;
+  border: 0 solid white;
+  border-radius: 50%;
+  overflow: visible;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s linear, margin-left 0.5s linear;
+}
+
+.flip-card.visible{
+  opacity: 1;
+  margin-left: 5vw;
+}
+
+.flip-card-inner {
+  height: 20vw;
+  width: 20vw;
+  margin-bottom: 30vw;
+  position: relative;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border: 0 solid black;
+  border-radius: 50%;
+
+  box-sizing: border-box;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  height: 20vw;
+  width: 20vw;
+  border: 5px solid black;
+  box-shadow: 0 0 0.7vw 0.2vw black;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+
+}
+.flip-card-back {
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.flip-card-front {
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+}
+
+.flip-card-front.white-mode {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: whitesmoke;
+  border-color: white;
+  color: black;
+  box-shadow: 0 0 0.5vw 0.15vw black;
+  font-size: 0.9vw;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.white-mode .flip-card-front, .flip-card-back {
+  border: 5px solid white;
+  box-shadow: 0 0 0.7vw 0.2vw white;
+}
+
+.white-mode .flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.white-mode .flip-card-front.white-mode {
+  background-color: black;
+  color: white;
+}
+
+.white-mode .flip-card-back {
+  background-color: black;
+  border-color: black;
+  color: white;
+  box-shadow: 0 0 0.5vw 0.15vw black;
+}
+
+
+
+.title{
+  position: absolute;
+  left: 45vw;
+  top: 25vw;
+  transform: translate(-50%, -50%);
+  height: 10vw;
+  width: 20vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*border: white 1px solid;*/
+  /*font-size: 600%;*/
+  font: 18vw "Corinthia", serif;
+  color: black;
+  text-shadow: 0 0 5px #ffffff;
+  font-weight: bolder;
+
+  transition: text-shadow 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+
+.title.visible{
+  font-size: 21vw;
+  text-underline: black;
+  animation: title 1.5s ease infinite;
+
+}
+
+.white-mode .title{
+  color: white;
+  text-shadow: 0 0 25px #000000;
+}
+
+.white-mode .title.visible{
+  font-size: 21vw;
+  text-underline: white;
+  animation: titleWhitemode 1.5s ease infinite;
+}
+
+h2 {
+  text-decoration: none;
+  /*display: inline-block;*/
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  display: block;
+  /*background: none repeat scroll 0 0 transparent;*/
+  box-shadow: 0 0 10px #ffffff;
+  height: 0.05vw;
+  width: 0;
+  background: none;
+  border: 0 solid #000000;
+  transition: width 1s ease-in-out 0s, height 1s ease-in-out;
+}
+h2.visible::after {
+  width: 110%;
+  border-bottom: 5px solid #000000;
+}
+
+.white-mode h2 {
+  text-decoration: none;
+  /*display: inline-block;*/
+  position: relative;
+}
+
+.white-mode h2::after {
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  display: block;
+  /*background: none repeat scroll 0 0 transparent;*/
+  box-shadow: 0 0 25px #000000;
+  height: 0.05vw;
+  width: 0;
+  background: none;
+  border: 0 solid #ffffff;
+  transition: width 1s ease-in-out 0s, height 1s ease-in-out;
+}
+.white-mode h2.visible::after {
+  width: 110%;
+  border-bottom: 5px solid #ffffff;
+}
+
+.Input{
+  position: relative;
+  margin-top: 8vw;
+  height: 40vw;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  column-count: 2;
+  justify-content: left;
+  border: white solid 0;
+  text-align: center;
+  opacity:0;
+  transition: opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+}
+
+.Input.visible{
+  opacity: 1;
+  margin-top: 5vw;
+}
+
+#Contact{
+  position: relative;
+  margin-left: 50vw;
+  transform: translate(-50%, -2.5vw);
+  font: 7vw "Corinthia", serif;
+  color:black;
+  text-shadow: 0 0 5px #ffffff;
+  font-weight: bolder;
+  transition: font-size 1s ease-in-out;
+}
+
+.white-mode #Contact{
+  color: white;
+  text-shadow: 0 0 5px #000000;
+}
+
+#Contact.visible{
+  font-size: 8vw;
+}
+
+
+#Footer{
+  position: relative;
+  margin-top: 2.5vw;
+  margin-bottom: 0.5vw;
+  left: 1vw;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 100vw;
+  font: 1.5vw "Corinthia", serif;
+  color: black;
+}
+
+.white-mode #Footer{
+  color: white;
+}
+
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover, a:focus, a:visited, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.white-mode a{
+  color: white;
+}
+
+
+
+h1 {
+  text-decoration: none;
+  /*display: inline-block;*/
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  display: block;
+  /*background: none repeat scroll 0 0 transparent;*/
+  box-shadow: 0 0 10px #ffffff;
+  height: 0.05vw;
+  width: 0;
+  background: none;
+  border: 0 solid #000000;
+  transition: width 1s ease-in-out 0s, height 1s ease-in-out;
+}
+h1.visible::after {
+  width: 105%;
+  border-bottom: 3px solid #000000;
+}
+
+.white-mode h1 {
+  text-decoration: none;
+  /*display: inline-block;*/
+  position: relative;
+}
+
+.white-mode h1::after {
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  display: block;
+  /*background: none repeat scroll 0 0 transparent;*/
+  box-shadow: 0 0 25px #000000;
+  height: 0.05vw;
+  width: 0;
+  background: none;
+  border: 0 solid #ffffff;
+  transition: width 1s ease-in-out 0s, height 1s ease-in-out;
+}
+.white-mode h1.visible::after {
+  width: 105%;
+  border-bottom: 3px solid #ffffff;
+}
+
+@keyframes title{
+  0%{
+    text-shadow: 0 0 5px #ffffff;
+  }
+  25%{
+    text-shadow: 0 0 8px #ffffff;
+  }
+  50%{
+    text-shadow: 0 0 10px #ffffff;
+  }
+  75%{
+    text-shadow: 0 0 8px #ffffff;
+  }
+  100%{
+    text-shadow: 0 0 5px #ffffff;
+  }
+}
+
+@keyframes titleWhitemode{
+  0%{
+    text-shadow: 0 0 15px #000000;
+  }
+  25%{
+    text-shadow: 0 0 19px #000000;
+  }
+  50%{
+    text-shadow: 0 0 25px #000000;
+  }
+  75%{
+    text-shadow: 0 0 19px #000000;
+  }
+  100%{
+    text-shadow: 0 0 15px #000000;
+  }
+}
+
+
+@keyframes ScrolingBarAnimation{
+  0%{
+    transform: translate(-40%,7.5vw);
+  }
+  25%{
+    transform: translate(-40%,-50%);
+  }
+  100%{
+    transform: translate(-40%,7.5vw);
+  }
+}
+@keyframes scrollTextAnim{
+  from{
+    transform: translatex(-50%);
+  }
+  to{
+    transform: translatex(50%);
+  }
+}
+
+

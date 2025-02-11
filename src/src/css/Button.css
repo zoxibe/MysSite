@@ -1,0 +1,52 @@
+.Button1{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: black;
+    align-items: center;
+    align-content: center;
+    font-size: 100%;
+    border-radius: 50px;
+    text-align: center;
+
+}
+
+.Button1:hover{
+    background-color: #0b0a0a;
+    cursor: pointer;
+    animation: Button1 2s ease-in-out infinite;
+}
+
+.Button1:active{
+    /*background-color: red;*/
+    transform: scale3d(98%, 98%, 98%);
+    box-shadow: 0 0 25px 0 #edd80c;
+
+}
+
+body.white-mode .Button1{
+    background-color: whitesmoke;
+}
+body.white-mode .Button1:hover{
+    background-color: white;
+}
+body.white-mode .Button1{
+    background-color: whitesmoke;
+}
+body.white-mode .Button1:active{
+    box-shadow: 0 0 25px 0 #edd80c;
+}
+
+
+@keyframes Button1{
+    0%{
+        box-shadow: 0 0 5px 0 #e3cf13;
+    }
+    50%{
+        box-shadow: 0 0 10px 0 #e3cf13;
+    }
+    100%{
+        box-shadow: 0 0 5px 0 #e3cf13;
+    }
+}
