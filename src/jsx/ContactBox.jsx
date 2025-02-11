@@ -10,9 +10,8 @@ function ContactBox() {
                     <a href={"https://github.com/zoxibe"} className={"GitHub"} target="_blank"></a>
                 </div>
             </div>
-            <form action={"https://script.google.com/macros/library/d/1STEVa_2TCPbDNqipziy383f6x915DG3eenZIXLSxabx5AIDUGqQKsHV-/2"}
+            <form action={"https://script.google.com/macros/s/AKfycby7BTtB-AKQhgnJSOvs8wthFZuuiwe1sTdrNe2BAddzykAgUt6JW0Sf7c6RMINJ7Lb4Ng/exec"}
                   method={"POST"}>
-
                 <div className="ContactBox2">
                     <div className="input-container">
                         <input type={"text"} name={"Nom"} id={"name"} placeholder={"name*"}/>
