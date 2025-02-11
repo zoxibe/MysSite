@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import '../css/ContactBox.css';
 
 function ContactBox() {
@@ -11,7 +10,7 @@ function ContactBox() {
                     <a href={"https://github.com/zoxibe"} className={"GitHub"} target="_blank"></a>
                 </div>
             </div>
-            <form action={"https://script.google.com/macros/s/AKfycbwnc6aCJW8KpTWK0PHkZzutB2QwUsLfT8Bf9j_Htkk5/dev"}
+            <form action={"https://script.google.com/macros/s/AKfycbzzW5Ok0QWavCwNRCIHVWpYm5P8_U4aMl-qyu4V353PvsUAUXyNlc_pZNtPQ8wIwtJ2hw/exec"}
                   method={"POST"}>
 
                 <div className="ContactBox2">
