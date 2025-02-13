@@ -45,32 +45,7 @@ html{
 
 
 
-.container {
-  position: relative;
-  height: 2.7vw;
-  width: 100vw;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-.ScrollDown{
-  font-size: 1.5vw;
-  font-style: oblique;
-  font-weight: bolder;
-  position: relative;
-  width: 100vw;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: scrollTextAnim 10s linear infinite;
-}
-
-.white-mode .container{
-  background-color: black;
-}
+/*Sommaire ---------------------------------------------------------------------------------------------------------*/
 
 .Sommaire1 {
   position: fixed;
@@ -83,281 +58,21 @@ html{
   z-index: 10;
 }
 
+
+/*Header -----------------------------------------------------------------------------------------------------------*/
+
 .header{
   position: relative;
-  height: 48vw;
+  height: 100vh;
   width: 100%;
   display: flex;
 
-  flex-direction: row;
+  flex-direction: column;
   column-count: 2;
   align-items: start;
   justify-content: start;
   overflow: hidden;
 }
-
-.ScrolingBar{
-  position: absolute;
-  top: 80%;
-  left: 95%;
-  height: 8vw;
-  width: 0.2vw;
-  background-color: black;
-  border: 0 solid black;
-  border-radius: 15px;
-}
-.ScrolingBarInner{
-  position: relative;
-  height: 0.75vw;
-  width: 0.75vw;
-  border: 0 solid black;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 0 10px black;
-  transform: translate(-40%,-50%);
-  animation: ScrolingBarAnimation 4s reverse ease-in infinite;
-}
-
-.white-mode .ScrolingBarInner{
-  background-color: black;
-  border: 1px solid white;
-  box-shadow: 0 0 10px white;
-  animation: ScrolingBarAnimation 4s reverse ease-in infinite;
-}
-.white-mode .ScrolingBar{
-  background-color: white;
-  border: 0 solid white;
-}
-
-.TextBox{
-  position: relative;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 50vw;
-  overflow: hidden;
-}
-
-.Text1{
-  position: absolute;
-  font-size: 1.7vw;
-  text-align: justify;
-  margin-left: 90%;
-  right: -10%;
-  opacity: 0;
-  margin-top: 30%;
-  height: 11vw;
-  width: 44vw;
-  padding-left: 1%;
-  padding-right: 1%;
-
-  border: 3px solid black;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0 0 10px black;
-
-  transition: right 0.3s linear, opacity 0.3s linear,height 0.3s linear,width 0.3s linear;
-}
-
-.Text1.visible{
-  right:5%;
-  opacity: 1;
-}
-
-.Text1:hover{
-  height: 11vw;
-  width: 44vw;
-}
-
-.white-mode .Text1 {
-  border-color: white;
-  box-shadow: 0 0 15px white;
-  background-color: black;
-}
-
-.Text2{
-  position: absolute;
-  font-size: 1.7vw;
-  text-align: justify;
-  left: -5%;
-  opacity: 0;
-  margin-top: 55%;
-  height: 11vw;
-  width: 44vw;
-
-  padding-bottom: 2%;
-  padding-left: 1%;
-  padding-right: 1%;
-  border: 3px solid black;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0 0 10px black;
-
-  transition: left 0.3s linear, opacity 0.3s linear,height 0.3s linear,width 0.3s linear;
-}
-
-.Text2.visible{
-  left:5%;
-  opacity: 1;
-}
-.Text2:hover{
-  height: 11vw;
-  width: 44vw;
-}
-
-.white-mode .Text2{
-  border-color: white;
-  box-shadow: 0 0 15px white;
-  background-color: black;
-}
-
-.Text3{
-  position: relative;
-  font-size: 2vw;
-  text-align: center;
-  margin-top: 80%;
-  left: 50%;
-  bottom: 0;
-  opacity: 0;
-
-  height: auto;
-  width: 70vw;
-  transform: translateX(-50%);
-
-  padding-bottom: 10%;
-  border: 3px solid black;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0 0 10px black;
-
-  transition: bottom 0.3s linear, opacity 0.3s linear,width 0.3s linear, height 0.3s linear;
-}
-
-.Text3.visible{
-  left:50%;
-  bottom: 5%;
-  opacity: 1;
-}
-
-.Text3:hover{
-  height: auto;
-  width: 70vw;
-}
-
-.white-mode .Text3.visible{
-  border-color: white;
-  box-shadow: 0 0 15px white;
-  background-color: black;
-}
-
-.flip-card{
-  position: absolute;
-  background-color: transparent;
-  height: 20vw;
-  width: 20vw;
-  shape-outside: circle(50%) margin-box;
-  margin-top: 5vw;
-  margin-left: -10vw;
-  border: 0 solid white;
-  border-radius: 50%;
-  overflow: visible;
-  box-sizing: border-box;
-  opacity: 0;
-  transition: opacity 0.3s linear, margin-left 0.5s linear;
-}
-
-.flip-card.visible{
-  opacity: 1;
-  margin-left: 5vw;
-}
-
-.flip-card-inner {
-  height: 20vw;
-  width: 20vw;
-  margin-bottom: 30vw;
-  position: relative;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  border: 0 solid black;
-  border-radius: 50%;
-
-  box-sizing: border-box;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  height: 20vw;
-  width: 20vw;
-  border: 5px solid black;
-  box-shadow: 0 0 0.7vw 0.2vw black;
-  border-radius: 50%;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  box-sizing: border-box;
-
-}
-.flip-card-back {
-  padding-left: 3vw;
-  padding-right: 3vw;
-}
-
-.flip-card-front {
-  background-color: black;
-  color: white;
-  box-sizing: border-box;
-}
-
-.flip-card-front.white-mode {
-  background-color: white;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: whitesmoke;
-  border-color: white;
-  color: black;
-  box-shadow: 0 0 0.5vw 0.15vw black;
-  font-size: 0.9vw;
-  transform: rotateY(180deg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-
-.white-mode .flip-card-front, .flip-card-back {
-  border: 5px solid white;
-  box-shadow: 0 0 0.7vw 0.2vw white;
-}
-
-.white-mode .flip-card-front {
-  background-color: white;
-  color: black;
-}
-
-.white-mode .flip-card-front.white-mode {
-  background-color: black;
-  color: white;
-}
-
-.white-mode .flip-card-back {
-  background-color: black;
-  border-color: black;
-  color: white;
-  box-shadow: 0 0 0.5vw 0.15vw black;
-}
-
 
 
 .title{
@@ -382,7 +97,6 @@ html{
   transition: text-shadow 0.3s ease-in-out, font-size 0.3s ease-in-out;
 }
 
-
 .title.visible{
   font-size: 21vw;
   text-underline: black;
@@ -401,55 +115,368 @@ html{
   animation: titleWhitemode 1.5s ease infinite;
 }
 
-h2 {
-  text-decoration: none;
-  /*display: inline-block;*/
-  position: relative;
-}
 
-h2::after {
-  content: "";
+.AnimScrolingBar{
   position: absolute;
-  bottom: 25%;
-  left: 0;
-  display: block;
-  /*background: none repeat scroll 0 0 transparent;*/
-  box-shadow: 0 0 10px #ffffff;
-  height: 0.05vw;
-  width: 0;
-  background: none;
-  border: 0 solid #000000;
-  transition: width 1s ease-in-out 0s, height 1s ease-in-out;
-}
-h2.visible::after {
-  width: 110%;
-  border-bottom: 5px solid #000000;
+  top: 75%;
+  left: 95%;
+  height: 8vw;
+  width: 0.2vw;
+  background-color: black;
+  border: 0 solid black;
+  border-radius: 15px;
 }
 
-.white-mode h2 {
-  text-decoration: none;
-  /*display: inline-block;*/
+.ScrolingBarInner{
   position: relative;
+  height: 0.75vw;
+  width: 0.75vw;
+  border: 0 solid black;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px black;
+  transform: translate(-40%,-50%);
+  animation: ScrolingBarAnimation 4s reverse ease-in infinite;
 }
 
-.white-mode h2::after {
-  content: "";
+.white-mode .ScrolingBarInner{
+  background-color: black;
+  border: 1px solid white;
+  box-shadow: 0 0 10px white;
+  animation: ScrolingBarAnimation 4s reverse ease-in infinite;
+}
+.white-mode .AnimScrolingBar{
+  background-color: white;
+  border: 0 solid white;
+}
+
+
+
+
+.ScrollingBar {
   position: absolute;
-  bottom: 25%;
-  left: 0;
-  display: block;
-  /*background: none repeat scroll 0 0 transparent;*/
-  box-shadow: 0 0 25px #000000;
-  height: 0.05vw;
-  width: 0;
-  background: none;
-  border: 0 solid #ffffff;
-  transition: width 1s ease-in-out 0s, height 1s ease-in-out;
+  height: 6vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: left;
+  margin-top: 95vh;
 }
-.white-mode h2.visible::after {
-  width: 110%;
-  border-bottom: 5px solid #ffffff;
+
+.ScrollDown{
+  font-size: calc(2vh + 0.5vw);
+  font-style: oblique;
+  font-weight: bolder;
+  position: relative;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scrollTextAnim 10s linear infinite;
 }
+
+.white-mode .ScrollingBar{
+  background-color: black;
+}
+
+
+/*About Me ---------------------------------------------------------------------------------------------------------*/
+
+.AboutMe{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 1vw;
+  overflow: hidden;
+}
+
+.card{
+  position: relative;
+  background-color: white;
+  background-image: url("src/assets/FRANVILLE_Timeo.jpg");
+  background-size: cover;
+  top: 47%;
+  height: 30vw;
+  width: 30vw;
+  transform: translate(0, -50%);
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-left: 5vw;
+  transition: background 0.6s;
+  font-size: 0;
+}
+
+
+.card:hover .Card-up,
+.card:hover  .Card-down {
+  position:relative;
+  font-size: 1.8vw;
+  text-align: center;
+  text-overflow: clip;
+  height: 52%;
+  width: 100%;
+  background-color: rgba(0, 0, 0);
+}
+
+.card:hover .Card-up{
+  animation: CardUpAnimation 1s forwards ;
+}
+.card:hover .Card-up h3{
+  padding-top: 20%;
+}
+
+.card:hover  .Card-down{
+  animation: CardDownAnimation 1s forwards ;
+}
+.card:hover  .Card-down h5{
+  padding-top: 10%;
+}
+
+.ZoneText{
+  position: relative;
+  width: 55vw;
+  height: 90%;
+  /*border: 3px white inset;*/
+
+  top: 3%;
+
+  display: flex;
+  flex-direction: column;
+  column-count: 3;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+
+.Text1{
+  font:  5vw "Corinthia", serif;
+  text-align: center;
+  padding-left: 5%;
+  padding-top: 2%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 13vw;
+}
+
+.Image1{
+  width: 25vw;
+  height: 14vw;
+  background-color: white;
+  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+  opacity: 0.5;
+}
+.Text2{
+  font:  5vw "Corinthia", serif;
+  text-align: center;
+  padding-right: 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 14vw;
+}
+
+.Image2{
+  width: 25vw;
+  height: 14vw;
+  background-color: white;
+  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 20% 100%);
+  opacity: 0.5;
+}
+
+.Text3{
+  font:  5vw "Corinthia", serif;
+  text-align: end;
+  padding-left: 5%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 13vw;
+}
+
+.Image3{
+  width: 25vw;
+  height: 14vw;
+  background-color: white;
+  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+  opacity: 0.5;
+}
+
+
+.ScrollingBar2 {
+  position: absolute;
+  height: 6vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 95vh;
+}
+
+.ScrollDown2{
+  font-size: calc(2vh + 0.5vw);
+  font-style: oblique;
+  font-weight: bolder;
+  position: relative;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scrollTextAnim 10s linear infinite;
+}
+
+.white-mode .ScrollingBar2{
+  background-color: black;
+}
+
+
+/*Compétences ----------------------------------------------------------------------------------------*/
+
+.Compétences{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 10vw;
+}
+
+
+.imageCompétences{
+  position: relative;
+  height: 94vh;
+  width: 30vw;
+  opacity: 0.5;
+  background-color: white;
+  margin-left: 10vw;
+  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+
+.TextCompétences{
+  position: relative;
+  height: 90%;
+  width: 55vw;
+  border: 5px solid white;
+  margin-top: 50vh;
+  transform: translateY(-53%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+  background-color: black;
+}
+
+.TextCompétences p{
+  font:  5vw "Corinthia", serif;
+  text-decoration: 1px white underline;
+}
+
+.TextCompétences li{
+  font-size: 1.5vw;
+  margin: 0 5vw;
+}
+
+
+.ScrollingBar3 {
+  position: absolute;
+  height: 6vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 95vh;
+}
+
+.ScrollDown3{
+  font-size: calc(2vh + 0.5vw);
+  font-style: oblique;
+  font-weight: bolder;
+  position: relative;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scrollTextAnim 10s linear infinite;
+}
+
+.white-mode .ScrollingBar3{
+  background-color: black;
+}
+
+/*Search ----------------------------------------------------------------------------------*/
+
+.Search{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.SearchText1{
+  position: absolute;
+  width: 23vw;
+  height: 30vw;
+  border: 1vw solid;
+  border-image: linear-gradient(90deg, cyan, lime) 1;
+  clip-path: polygon(
+          100% 20%,100% 0%, 0% 0%, 100% 0%,100% 100%, 100% 80%
+  );
+}
+
+
+
+
+
+.ScrollingBar4 {
+  position: absolute;
+  height: 6vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 95vh;
+}
+
+.ScrollDown4{
+  font-size: calc(2vh + 0.5vw);
+  font-style: oblique;
+  font-weight: bolder;
+  position: relative;
+  width: 100vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scrollTextAnim 10s linear infinite;
+}
+
+.white-mode .ScrollingBar4{
+  background-color: #ffffff;
+  color: black;
+}
+
+
+
+
+
+/*Input and Contact ----------------------------------------------------------------------------------*/
 
 .Input{
   position: relative;
@@ -509,6 +536,7 @@ h2.visible::after {
   color: white;
 }
 
+/*Text -------------------------------------------------------------------------------*/
 
 a{
   text-decoration: none;
@@ -519,7 +547,6 @@ a:hover, a:focus, a:visited, a:active {
   text-decoration: none;
   color: inherit;
 }
-
 
 .white-mode a{
   color: white;
@@ -547,6 +574,7 @@ h1::after {
   border: 0 solid #000000;
   transition: width 1s ease-in-out 0s, height 1s ease-in-out;
 }
+
 h1.visible::after {
   width: 105%;
   border-bottom: 3px solid #000000;
@@ -576,6 +604,61 @@ h1.visible::after {
   width: 105%;
   border-bottom: 3px solid #ffffff;
 }
+
+
+h2 {
+  text-decoration: none;
+  /*display: inline-block;*/
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  display: block;
+  /*background: none repeat scroll 0 0 transparent;*/
+  box-shadow: 0 0 10px #ffffff;
+  height: 0.05vw;
+  width: 0;
+  background: none;
+  border: 0 solid #000000;
+  transition: width 1s ease-in-out 0s, height 1s ease-in-out;
+}
+h2.visible::after {
+  width: 110%;
+  border-bottom: 5px solid #000000;
+}
+
+.white-mode h2 {
+  text-decoration: none;
+  /*display: inline-block;*/
+  position: relative;
+}
+
+.white-mode h2::after {
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  display: block;
+  /*background: none repeat scroll 0 0 transparent;*/
+  box-shadow: 0 0 25px #000000;
+  height: 0.05vw;
+  width: 0;
+  background: none;
+  border: 0 solid #ffffff;
+  transition: width 1s ease-in-out 0s, height 1s ease-in-out;
+}
+.white-mode h2.visible::after {
+  width: 110%;
+  border-bottom: 5px solid #ffffff;
+}
+
+
+
+/*Key Frames-----------------------------------------------------------------------------------*/
 
 @keyframes title{
   0%{
@@ -627,11 +710,31 @@ h1.visible::after {
 }
 @keyframes scrollTextAnim{
   from{
-    transform: translatex(-50%);
+    transform: translatex(-57%);
   }
   to{
-    transform: translatex(50%);
+    transform: translatex(57%);
   }
 }
+
+@keyframes CardUpAnimation{
+  from{
+    transform:translateY(-150%);
+  }
+  to{
+    transform:translateY(-16%);
+  }
+}
+
+@keyframes CardDownAnimation{
+  from{
+    transform:translateY(100%);
+  }
+  to{
+    transform:translateY(-35%);
+  }
+}
+
+
 
 
