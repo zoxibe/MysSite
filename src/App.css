@@ -550,6 +550,10 @@ html{
   padding-right: 2vw;
 }
 
+.white-mode .SearchText1{
+  color: #ddc4a4;
+}
+
 .SearchCadre2{
   position: absolute;
   width: 40vw;
@@ -592,6 +596,10 @@ html{
   text-align: justify;
   font-size: calc(2vh + 0.5vw);
   padding: 1vw;
+}
+
+.white-mode .SearchText2{
+  color: #ddc4a4;
 }
 
 
