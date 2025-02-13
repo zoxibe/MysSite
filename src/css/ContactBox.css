@@ -13,7 +13,7 @@ input,textarea {
 body.white-mode input,textarea{
     border-color: white;
     background-color: black;
-    color: white;
+    color: #ddc4a4;
     box-shadow: 0 0 10px white;
 }
 
@@ -42,7 +42,7 @@ body.white-mode input,textarea{
 body.white-mode #subject{
     border-color: white;
     background-color: black;
-    color: white;
+    color: #ddc4a4;
     box-shadow: 0 0 10px white;
 }
 
@@ -90,7 +90,7 @@ body.white-mode #subject{
 }
 
 body.white-mode #TextContact{
-    color: white;
+    color: #ddc4a4;
     text-shadow: 0 0 5px black;
 }
 
@@ -110,13 +110,13 @@ input[type=submit]{
 body.white-mode input[type=submit]{
     border-color: white;
     background-color: black;
-    color: white;
+    color: #ddc4a4;
     box-shadow: 0 0 10px white;
 }
 
 input[type=submit]:hover {
     background-color: black;
-    color: white;
+    color: #ddc4a4;
     box-shadow: 0 0 20px 5px white;
     border-color: white;
 }
