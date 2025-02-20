@@ -159,6 +159,23 @@ body.white-mode input[type=submit]:hover{
     animation: LogoinAnim 0.3s ease;
 }
 
+.Mail{
+    position: relative;
+    height: 4vw;
+    width: 4vw;
+    background-image: url('../assets/MailImg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+    scale:1.2;
+}
+
+.Mail:hover{
+    scale: 1.3;
+    animation: LogoinAnim 0.3s ease;
+}
+
 @keyframes LogoinAnim {
     0%{
         transform: rotate(-10deg);

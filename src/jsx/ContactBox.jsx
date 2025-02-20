@@ -8,9 +8,11 @@ function ContactBox() {
                 <div className={"logoContainer"}>
                     <a href={"https://www.linkedin.com/in/timéo-franville"} className={"Linkedin"} target="_blank"></a>
                     <a href={"https://github.com/zoxibe"} className={"GitHub"} target="_blank"></a>
+                    <a href={"mailto:franville@et.esiea.fr"} className={"Mail"} target="_blank"></a>
                 </div>
             </div>
-            <form action={"https://script.google.com/macros/s/AKfycbzzW5Ok0QWavCwNRCIHVWpYm5P8_U4aMl-qyu4V353PvsUAUXyNlc_pZNtPQ8wIwtJ2hw/exec"}
+            <form
+                action={"https://script.google.com/macros/s/AKfycbzzW5Ok0QWavCwNRCIHVWpYm5P8_U4aMl-qyu4V353PvsUAUXyNlc_pZNtPQ8wIwtJ2hw/exec"}
                   method={"POST"}>
                 <div className="ContactBox2">
                     <div className="input-container">

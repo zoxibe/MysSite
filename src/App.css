@@ -4,7 +4,7 @@ body{
   height: auto;
   width: 100vw;
   color: #0e0e0e;
-  background: linear-gradient(180deg, #ede3e3, antiquewhite);
+  background: linear-gradient(180deg, #ede3e3, #fff2e4);
 }
 
 .white-mode {
