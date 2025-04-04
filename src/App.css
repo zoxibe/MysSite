@@ -200,7 +200,7 @@ html{
 .card{
   position: relative;
   background-color: #ede3e3;
-  background-image: url("src/assets/FRANVILLE_Timeo.jpg");
+  background-image: url("./assets/FRANVILLE_Timeo.jpg");
   background-size: cover;
   top: 47%;
   height: 30vw;
@@ -588,7 +588,7 @@ html{
   translate: -50%;
 
 
-  background-image: url("src/assets/CV.jpg");
+  background-image: url("./assets/CV.jpg");
   background-size: cover;
   border-radius: 1px;
   overflow: hidden;
@@ -637,7 +637,7 @@ html{
   width: 50px;
   height: 50px;
   border-radius: 5px;
-  background-image: url("src/assets/download-archive.png");
+  background-image: url("./assets/download-archive.png");
 
   background-size: cover;
 
