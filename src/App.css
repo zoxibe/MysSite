@@ -222,7 +222,7 @@ html{
 }
 
 
-/*.card:hover*/ .Card-up,
+.Card-up,
 .card:hover  .Card-down {
   position:relative;
   font-size: 1.8vw;
@@ -301,16 +301,50 @@ html{
   align-items: start;
   gap: 13vw;
 }
-
-.Image1{
+.ImageContainer1{
+  position: relative;
   width: 25vw;
   height: 14vw;
-  background-color: #ffffff;
+  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+
+.Image1{
+  position: absolute;
+  width: 25vw;
+  height: 14vw;
+  background-color: #0e0e0e;
   background-image: url("./assets/Decouvrir.jpeg");
   background-size: cover;
-  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
   opacity: 1;
 }
+
+.Image1-Up{
+  position: absolute;
+  width: 25vw;
+  height: 15vw;
+  background: #0e0e0e;
+  color: #ede3e3;
+  font-size: 3vw;
+  text-align: center;
+  text-overflow: clip;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+
+  animation: SlideUpAnimation 3s forwards infinite;
+}
+
+.white-mode .Image1-Up{
+  color: #ddc4a4;
+}
+
+
+.ImageContainer1:hover .Image1-Up{
+  animation: SlideUpHoverAnimation 0.6s forwards;
+}
+
 .Text2{
   font:  5vw "Corinthia", serif;
   text-align: center;
@@ -321,7 +355,15 @@ html{
   gap: 14vw;
 }
 
+.ImageContainer2{
+  position: relative;
+  width: 25vw;
+  height: 14vw;
+  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 20% 100%);
+}
+
 .Image2{
+  position: absolute;
   width: 25vw;
   height: 14vw;
   background-color: #ffffff;
@@ -331,9 +373,35 @@ html{
   opacity: 1;
 }
 
+.Image2-Up{
+  position: absolute;
+  width: 25vw;
+  height: 15vw;
+  background: #0e0e0e;
+  color: #ede3e3;
+  font-size: 3vw;
+
+  text-overflow: clip;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+
+  animation: SlideUpAnimation2 3s forwards infinite;
+}
+
+.white-mode .Image2-Up{
+  color: #ddc4a4;
+}
+
+
+.ImageContainer2:hover .Image2-Up{
+  animation: SlideUpHoverAnimation2 0.6s forwards;
+}
+
 .Text3{
   font:  5vw "Corinthia", serif;
-  text-align: end;
+  text-align: center;
   padding-left: 5%;
 
   display: flex;
@@ -342,17 +410,59 @@ html{
   gap: 13vw;
 }
 
+.ImageContainer3{
+  position: relative;
+  width: 25vw;
+  height: 14vw;
+  clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+
 .Image3{
+  position: absolute;
   width: 25vw;
   height: 14vw;
   background-color: #ffffff;
   background-image: url("./assets/Partager.jpeg");
   background-position-x: 50%;
   background-size: 65%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
   opacity: 1;
+
 }
 
+.Image3-Up{
+  position: absolute;
+  width: 25vw;
+  height: 15vw;
+  background: #0e0e0e;
+  color: #ede3e3;
+  font-size: 3vw;
+  text-align: center;
+  text-overflow: clip;
+  transform: translateX(100%);
+
+  animation: SlideUpAnimation 3s forwards infinite;
+}
+
+.white-mode .Image3-Up{
+  color: #ddc4a4;
+}
+
+
+.ImageContainer3:hover .Image3-Up{
+  animation: SlideUpHoverAnimation 0.6s forwards;
+}
+
+
+.Image1-Up p, .Image2-Up p, .Image3-Up p{
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
 
 .ScrollingBar2 {
   position: absolute;
@@ -401,6 +511,7 @@ html{
 }
 
 
+
 .imageCompétences{
   position: relative;
   height: 95vh;
@@ -422,6 +533,133 @@ html{
   margin-top: 0;
 }
 
+.CVbutton{
+  position: absolute;
+  width: 6vw;
+  height: 6vw;
+
+  background-color: #ede3e3;
+  border-radius: 100px;
+
+
+  z-index: 1000;
+  top: -5%;
+  left: -5%;
+
+  animation: CVbuttonAnim 2s ease-in-out infinite;
+}
+
+.CVbutton:hover{
+  box-shadow: 0 0 15px #0e0e0e;
+  cursor: pointer;
+  height: 6vw;
+  width: 6vw;
+  transition: height 0.3s linear, width 0.3s linear,background-color 0.3s linear;
+  animation: CVbuttonAnim 0.3s;
+}
+
+.CV-mode .CV-md{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  opacity: 0;
+}
+
+.CV-mode .CV{
+  max-width: 34vw;
+  max-height: 95vh;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  @media (max-width: 480px) {
+    img {
+      width: 100%;
+    }
+  }
+
+  z-index: 1;
+  position: absolute;
+  margin-top: 10vh;
+  margin-left: 50%;
+  translate: -50%;
+
+
+  background-image: url("src/assets/CV.jpg");
+  background-size: cover;
+  border-radius: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.CV-mode .CV.visible{
+  opacity: 1;
+  margin-top: 0;
+  transition: opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out
+}
+
+.CV-mode .CvbuttonOff{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+
+  object-fit: cover;
+
+  background-color: #191818;
+  border-radius: 100px;
+
+
+  z-index: 1000;
+  top: -5%;
+  left: -5%;
+
+  animation: CVbuttonAnim 2s ease-in-out infinite;
+}
+
+.CV-mode .CvbuttonOff:hover{
+  box-shadow: 0 0 15px #0e0e0e;
+  cursor: pointer;
+  height: 5.5vw;
+  width: 5.5vw;
+
+  object-fit: cover;
+
+  transition: height 0.3s linear, width 0.3s linear,background-color 0.3s linear;
+
+  animation: CVbuttonAnim 0.1s ease-in-out;
+}
+
+.CV-mode .DowloadButton{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-image: url("src/assets/download-archive.png");
+
+  background-size: cover;
+
+  right: 10px;
+  top: 5px;
+}
+
+.CV-mode .DowloadButton:hover{
+ animation: LogoinAnim 0.3s ease;
+}
+
+
+.CV-mode .backgroundCV{
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  background-color: #0e0e0e;
+  opacity: 0.9;
+
+  z-index: 1;
+
+}
 
 
 .TextCompétences{
@@ -444,6 +682,7 @@ html{
 
   opacity: 0;
   margin-top: 55vh;
+  overflow: hidden;
   transition: opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
 }
 
@@ -512,7 +751,8 @@ html{
   width: 23vw;
   height: 70vh;
   border: 1vw solid;
-  border-image: linear-gradient(-90deg, cyan, lime) 1;
+  border-image: linear-gradient(0deg, cyan, lime) 1;
+  animation: borderAnimation 10.5s linear infinite;
 
 
   margin-left: 5vw;
@@ -534,7 +774,8 @@ html{
   height:30vh;
   background-color: #0e0e0e;
   border: 0.25vw solid;
-  border-image: linear-gradient(-90deg, cyan, lime) 1;
+  border-image: linear-gradient(75deg, cyan, lime) 1;
+  animation: borderAnimation 10.3s linear infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -559,7 +800,8 @@ html{
   width: 40vw;
   height: 20vh;
   border: 1vw solid;
-  border-image: linear-gradient(-180deg, cyan, lime) 1;
+  border-image: linear-gradient(50deg, cyan, lime) 1;
+  animation: borderAnimation 10s linear infinite;
 
   margin-left: 55vw;
   transform: translateY(-50%);
@@ -583,7 +825,8 @@ html{
   height:30vh;
   background-color: #0e0e0e;
   border: 0.25vw solid;
-  border-image: linear-gradient(180deg, cyan, lime) 1;
+  border-image: linear-gradient(25deg, cyan, lime) 1;
+  animation: borderAnimation 9.5s linear infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -594,7 +837,7 @@ html{
 
   color: #ede3e3;
   text-align: justify;
-  font-size: calc(2vh + 0.5vw);
+  font-size: calc(0.5vh + 1.5vw);
   padding: 1vw;
 }
 
@@ -814,6 +1057,7 @@ h2.visible::after {
 
 
 
+
 /*Key Frames-----------------------------------------------------------------------------------*/
 
 @keyframes title{
@@ -824,7 +1068,7 @@ h2.visible::after {
     text-shadow: 0 0 8px #ffffff;
   }
   50%{
-    text-shadow: 0 0 10px #ffffff;
+    text-shadow: 0 0 35px #ffffff;
   }
   75%{
     text-shadow: 0 0 8px #ffffff;
@@ -842,7 +1086,7 @@ h2.visible::after {
     text-shadow: 0 0 19px #000000;
   }
   50%{
-    text-shadow: 0 0 25px #000000;
+    text-shadow: 0 0 35px #000000;
   }
   75%{
     text-shadow: 0 0 19px #000000;
@@ -891,12 +1135,90 @@ h2.visible::after {
   }
 }
 
-@keyframes SearchTextAnim{
-  from{
-    border-image: linear-gradient(90deg, cyan, lime) 1;
+@keyframes SlideUpAnimation {
+  0%{
+    transform:translateX(100%);
   }
-  to{
-    border-image: linear-gradient(10deg, cyan, lime) 1;
+  50%{
+    transform:translateX(90%);
+  }
+  100%{
+    transform:translateX(100%);
+  }
+}
+
+@keyframes SlideUpHoverAnimation {
+  0%{
+    transform:translateX(100%);
+  }
+  100%{
+    transform:translateX(0%);
+  }
+}
+
+@keyframes SlideUpAnimation2 {
+  0%{
+    transform:translateX(-100%);
+  }
+  50%{
+    transform:translateX(-90%);
+  }
+  100%{
+    transform:translateX(-100%);
+  }
+}
+
+@keyframes SlideUpHoverAnimation2 {
+  0%{
+    transform:translateX(-100%);
+  }
+  100%{
+    transform:translateX(0%);
+  }
+}
+
+@keyframes LogoinAnim {
+  0%{
+    transform: rotate(-10deg);
+  }
+  50%{
+    transform: rotate(10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes CVbuttonAnim {
+  0%{
+    height: 5.5vw;
+    width: 5.5vw;
+  }
+  50%{
+    height: 6vw;
+    width: 6vw;
+  }
+  100%{
+    height: 5.5vw;
+    width: 5.5vw;
+  }
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-image-source: linear-gradient(0deg, cyan, lime);
+  }
+  25% {
+    border-image-source: linear-gradient(90deg, cyan, lime);
+  }
+  50% {
+    border-image-source: linear-gradient(180deg, cyan, lime);
+  }
+  75% {
+    border-image-source: linear-gradient(270deg, cyan, lime);
+  }
+  100% {
+    border-image-source: linear-gradient(360deg, cyan, lime);
   }
 }
 

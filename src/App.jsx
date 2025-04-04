@@ -8,10 +8,18 @@ function App() {
 
     const [isWhiteMode, setIsWhiteMode] = useState(false);
 
-    function myFunction() {
+    function ThemeFunction() {
         const element = document.body;
         element.classList.toggle("white-mode");
         setIsWhiteMode(!isWhiteMode);
+    }
+
+    const [isCVMode, setIsCVMode] = useState(false);
+
+    function CVFunction() {
+        const element = document.querySelector(".CV-md");
+        element.classList.toggle("CV-mode");
+        setIsCVMode(!isCVMode);
     }
 
     const observer = new IntersectionObserver((entries) => {
@@ -45,6 +53,10 @@ function App() {
         const TxtCompElement = document.querySelector('.TextCompétences');
         if (TxtCompElement) {
             observer.observe(TxtCompElement);
+        }
+        const CV = document.querySelector('.CV');
+        if (CV) {
+            observer.observe(CV);
         }
         const CadreSeachElement1 = document.querySelector('.SearchCadre1');
         if (CadreSeachElement1) {
@@ -90,7 +102,7 @@ function App() {
 
                 <div className={"header"}>
                     {/*<Cursor/>*/}
-                    <button className={"ColorTheme"} onClick={myFunction}></button>
+                    <button className={"ColorTheme"} onClick={ThemeFunction}></button>
                     <div className={"title"}>
                         <h2 id="Title">TiméoF</h2>
                     </div>
@@ -122,15 +134,34 @@ function App() {
                     <div className={"ZoneText"}>
                         <div className={"Text1"}>
                             <p>Découvrir</p>
-                            <div className={"Image1"}></div>
+                            <div className={"ImageContainer1"}>
+                                <div className={"Image1-Up"}>.</div>
+                                <div className={"Image1"}></div>
+                                <div className={"Image1-Up"}>
+                                    <p>Explorer une grande diversité de projets.</p>
+                                </div>
+                            </div>
                         </div>
                         <div className={"Text2"}>
-                            <div className={"Image2"}></div>
+                            <div className={"ImageContainer2"}>
+                                <div className={"Image2-Up"}>.</div>
+                                <div className={"Image2"}></div>
+                                <div className={"Image2-Up"}>
+                                    <p>Imaginer et concevoir de nouvelles façons de faire.</p>
+                                </div>
+                            </div>
                             <p>Créer</p>
                         </div>
+
                         <div className={"Text3"}>
                             <p>Partager</p>
-                            <div className={"Image3"}></div>
+                            <div className={"ImageContainer3"}>
+                                <div className={"Image3-Up"}>.</div>
+                                <div className={"Image3"}></div>
+                                <div className={"Image3-Up"}>
+                                    <p>Diffuser à travers des vidéos et des contenus médias.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -143,12 +174,28 @@ function App() {
                 </div>
 
                 <div id={"CompSommaire"}></div>
+                <div className={"CV-md"}>
+
+
+                <div className={"backgroundCV"}></div>
+                <div className={"CV"}>
+                    <div className={"CvbuttonOff"} onClick={CVFunction}></div>
+                        <a className={"DowloadButton"} href={"src/assets/CV.jpg"} download={"Timéo_FRANVILLE_CV.jpg"}></a>
+                </div>
+
+                </div>
 
                 <div className={"Compétences"}>
 
+
                     <div className={"imageCompétences"}></div>
 
+
                     <div className={"TextCompétences"}>
+
+                        <div className={"CVbutton"} onClick={CVFunction}></div>
+
+
                         <p>Compétences techniques</p>
                         <ol style={{listStyleType: "disc"}}>
                             <li>Programmation : [C, C++, JavaScript, Css]</li>
