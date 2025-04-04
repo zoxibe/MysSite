@@ -1,8 +1,0 @@
-.cursor {
-    height: 5px;
-    width: 5px;
-    background-color: white;
-    border-radius: 50%;
-    pointer-events: none; /* Ignore les interactions de la souris */
-    transition: top 0.05s linear, left 0.05s linear; /* Lissage du mouvement */
-}
