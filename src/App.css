@@ -588,7 +588,7 @@ html{
   translate: -50%;
 
 
-  background-image: url("./assets/CV.jpg");
+  background-image: url("../public/assets/CV.jpg");
   background-size: cover;
   border-radius: 1px;
   overflow: hidden;
