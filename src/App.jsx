@@ -180,7 +180,7 @@ function App() {
                 <div className={"backgroundCV"}></div>
                 <div className={"CV"}>
                     <div className={"CvbuttonOff"} onClick={CVFunction}></div>
-                        <a className={"DowloadButton"} href={"/assets/CV.jpg"} download={"Timéo_FRANVILLE_CV.jpg"}></a>
+                        <a className={"DowloadButton"} href={"/assets/Timéo_FRANVILLE_CV.jpg"} download={"Timéo_FRANVILLE_CV.jpg"}></a>
                 </div>
 
                 </div>
